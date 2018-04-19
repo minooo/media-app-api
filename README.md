@@ -16,4 +16,9 @@ wx.onShare({
   imgUrl: "http://public.duduapp.net/new-media/app/static/avatar.png", // 分享图标
 })
 
+// 下载
+wx.downloadFile({
+  url: data.audio_url // 下载资源的 url，下载成功后原生那边最好给个页面提示
+})
+
 ```
