@@ -21,4 +21,11 @@ wx.downloadFile(JSON.stringify({
   url: data.audio_url // 下载资源的 url，下载成功后原生那边最好给个页面提示
 }))
 
+// 提供页面需要的音频等字段
+wx.audioSourse(JSON.stringify({
+  url: data.audio_url, // 音频链接
+  prev: `${window.location.origin}/sight-audio/${data.prev && data.prev.id}`, // 上一个音频的页面链接，注意这不是音频链接
+  next: `${window.location.origin}/sight-audio/${data.next && data.next.id}`, // 下一个音频的页面链接，注意这不是音频链接
+}))
+
 ```
