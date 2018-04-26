@@ -19,6 +19,7 @@ wx.onShare(JSON.stringify({
 // 下载
 wx.downloadFile(JSON.stringify({
   url: data.audio_url // 下载资源的 url，下载成功后原生那边最好给个页面提示,
+  title: data.title, // 标题
   img: (data.author && data.author.avatar) || "http://public.duduapp.net/new-media/app/static/avatar.png", // 占位图
 }))
 
