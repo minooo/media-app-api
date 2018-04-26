@@ -25,6 +25,11 @@ wx.setTo(JSON.stringify({
   path: "", // 必选
 }))
 
+// 登陆
+wx.loginTo(JSON.stringify({
+  path: "", // 必选
+}))
+
 // 分享
 wx.onShare(JSON.stringify({
   title: data.title, // 分享标题
