@@ -57,4 +57,12 @@ wx.audioSourse(JSON.stringify({
   next: `${window.location.origin}/sight-audio/${data.next && data.next.id}`, // 下一个音频的页面链接，注意这不是音频链接
 }))
 
+// 初始化提供页面需要的音频等字段
+wx.audioInitSourse(JSON.stringify({
+   url: data.chapters[focus].media_url,
+   img: data.chapters[focus].image,
+   title: data.chapters[focus].title,
+   text: data.chapters[focus].media_url === 1 && data.chapters[focus].content,
+   mediaType: `${data.chapters[focus].chapter_type === 1 ? data.chapters[focus].media_type : 3}`,
+ }))
 ```
