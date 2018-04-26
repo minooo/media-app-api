@@ -25,7 +25,7 @@ wx.setTo(JSON.stringify({
   path: "", // 必选
 }))
 
-// 登陆
+// 无返回参数的登陆
 wx.loginTo(JSON.stringify({
   path: "", // 必选
 }))
