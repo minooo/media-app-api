@@ -2,7 +2,7 @@
 新媒体接口调用方式，仿微信
 
 ```js
-// 路由跳转
+// 登陆
 wx.navigateTo(JSON.stringify({
   path: "/login", // 必选
   back: `${window.location.origin}/sight-audio/${data.id}` // 登陆成功后需要继续跳转的页面，如果没有，则默认跳到首页
