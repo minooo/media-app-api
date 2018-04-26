@@ -8,6 +8,16 @@ wx.navigateTo(JSON.stringify({
   back: `${window.location.origin}/sight-audio/${data.id}` // 登陆成功后需要继续跳转的页面，如果没有，则默认跳到首页
 }))
 
+// 课程
+wx.courseTo(JSON.stringify({
+  path: `${window.location.origin}/course/${item.id}`, // 必选
+}))
+
+// 视角
+wx.sightTo(JSON.stringify({
+  path: `${window.location.origin}/sight-audio/${item.id}`, // 必选
+}))
+
 // 分享
 wx.onShare(JSON.stringify({
   title: data.title, // 分享标题
