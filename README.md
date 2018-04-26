@@ -28,7 +28,7 @@ wx.audioSourse(JSON.stringify({
   url: data.audio_url, // 音频链接
   text: data.audio_text, // 音频文字
   img: (data.author && data.author.avatar) || "http://public.duduapp.net/new-media/app/static/avatar.png",
-  mediaType: "1", // 1音频， 2视频
+  mediaType: "1", // 1音频， 2视频 3图文，如果是图文，原生应该自动隐去视频/音频模块
   prev: `${window.location.origin}/sight-audio/${data.prev && data.prev.id}`, // 上一个音频的页面链接，注意这不是音频链接
   next: `${window.location.origin}/sight-audio/${data.next && data.next.id}`, // 下一个音频的页面链接，注意这不是音频链接
 }))
