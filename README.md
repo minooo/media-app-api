@@ -2,9 +2,9 @@
 新媒体接口调用方式，仿微信
 
 ```js
-// 登陆
+// 路由跳转
 wx.navigateTo(JSON.stringify({
-  path: "/login",
+  path: "/login", // 必选
   back: `${window.location.origin}/sight-audio/${data.id}` // 登陆成功后需要继续跳转的页面，如果没有，则默认跳到首页
 }))
 
@@ -18,13 +18,15 @@ wx.onShare(JSON.stringify({
 
 // 下载
 wx.downloadFile(JSON.stringify({
-  url: data.audio_url // 下载资源的 url，下载成功后原生那边最好给个页面提示
+  url: data.audio_url // 下载资源的 url，下载成功后原生那边最好给个页面提示,
+  img: (data.author && data.author.avatar) || "http://public.duduapp.net/new-media/app/static/avatar.png", // 占位图
 }))
 
 // 提供页面需要的音频等字段
 wx.audioSourse(JSON.stringify({
   url: data.audio_url, // 音频链接
   text: data.audio_text, // 音频文字
+  img: (data.author && data.author.avatar) || "http://public.duduapp.net/new-media/app/static/avatar.png",
   mediaType: "1", // 1音频， 2视频
   prev: `${window.location.origin}/sight-audio/${data.prev && data.prev.id}`, // 上一个音频的页面链接，注意这不是音频链接
   next: `${window.location.origin}/sight-audio/${data.next && data.next.id}`, // 下一个音频的页面链接，注意这不是音频链接
