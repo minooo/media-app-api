@@ -66,4 +66,17 @@ wx.audioInitSourse(JSON.stringify({
    text: data.chapters[focus].media_url === 1 && data.chapters[focus].content,
    mediaType: `${data.chapters[focus].chapter_type === 1 ? data.chapters[focus].media_type : 3}`,
  }))
+ 
+ // 支付
+ wx.pay(JSON.stringify({
+    return_code: "SUCCESS",
+    return_msg: "OK",
+    appid: "wx01754ee3c11b2f17",
+    mch_id: "1483129732",
+    nonce_str: "dBfGibahLFadbVlr",
+    sign: "66A9E13BADBB5C86222FF673A518C9B8",
+    result_code: "SUCCESS",
+    prepay_id: "wx271056069612794e07eed3fb4126190544",
+    trade_type: "APP"
+ }))
 ```
