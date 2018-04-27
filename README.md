@@ -12,6 +12,7 @@ wx.navigateTo(JSON.stringify({
 wx.courseTo(JSON.stringify({
   path: `${window.location.origin}/course/${item.id}`, // 必选
   mediaType: `${item.chapter_type === 1 ? item.chapter_media_type : 3}`, // 1音频， 2视频 3图文，如果是图文，原生应该自动隐去视频/音频模块,
+  mediaUrl: `${item.chapter_type === 1 ? item.chapter_media_url : ""}`, // 免费的多媒体的url 
   img: item.image
 }))
 
