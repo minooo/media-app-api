@@ -79,4 +79,13 @@ wx.audioInitSourse(JSON.stringify({
     prepay_id: "wx271056069612794e07eed3fb4126190544",
     trade_type: "APP"
  }))
+ 
+ // 音频数组列表
+ wx.giveAudioArr(JSON.stringify({
+   audios: response.chapters
+ }))
+ // "id": 1,
+ // "media_url": "http://public.duduapp.net/new-media/app/static/go.mp3",
+ // "image": "http://file.duduapp.net/40/dd/40dd2634742268b8b94e1e4bacba1301.png",
+ // "title": "Harmony Heaney"
 ```
