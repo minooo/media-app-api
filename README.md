@@ -64,6 +64,7 @@ wx.audioInitSourse(JSON.stringify({
    url: data.chapters[focus].media_url,
    img: data.chapters[focus].image,
    title: data.chapters[focus].title,
+   chapterId: chapters[focus].id,
    text: data.chapters[focus].media_url === 1 && data.chapters[focus].content,
    mediaType: `${data.chapters[focus].chapter_type === 1 ? data.chapters[focus].media_type : 3}`,
  }))
