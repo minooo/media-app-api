@@ -45,6 +45,7 @@ wx.downloadFile(JSON.stringify({
   title: data.title, // 标题
   created: data.chapters[focus].created_at, // 创建日期
   img: (data.author && data.author.avatar) || "http://public.duduapp.net/new-media/app/static/avatar.png", // 占位图
+  id: data.id
 }))
 
 // 提供页面需要的音频等字段
