@@ -69,6 +69,12 @@ wx.audioInitSourse(JSON.stringify({
    mediaType: `${data.chapters[focus].chapter_type === 1 ? data.chapters[focus].media_type : 3}`,
  }))
  
+ // 给出课程的一点信息
+ wx.giveCourseTip(JSON.stringify({
+  price: data.price,
+  is_buy: response.is_buy
+}))
+ 
  // 移除页面的多媒体播放模块
  wx.removeMedia()
  
