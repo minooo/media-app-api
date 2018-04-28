@@ -89,4 +89,24 @@ wx.audioInitSourse(JSON.stringify({
  // "media_url": "http://public.duduapp.net/new-media/app/static/go.mp3",
  // "image": "http://file.duduapp.net/40/dd/40dd2634742268b8b94e1e4bacba1301.png",
  // "title": "Harmony Heaney"
+ 
+// 跳转推送信息界面
+wx.msgPush(JSON.stringify({
+  path: "/msg"
+}))
+
+// 跳转下载课程页面
+wx.downloadCourse(JSON.stringify({
+  path: "/downloadcourse"
+}))
+
+// 上传图片
+wx.imgTo(JSON.stringify({
+ type: opType, token: token
+}));
+
+// 第三方注册成功
+wx.succeedTo(JSON.stringify({
+ member_id: id
+}));
 ```
