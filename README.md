@@ -109,4 +109,11 @@ wx.imgTo(JSON.stringify({
 wx.succeedTo(JSON.stringify({
  member_id: id
 }));
+
+//调起电话
+wx.callPhone(
+ JSON.stringify({
+   tel: "13526832296"
+ })
+);
 ```
