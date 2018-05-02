@@ -3,7 +3,7 @@
 
 ```js
 // 切换导航显示与否
-wx.switchNav(JSON.stringfy({
+wx.switchNav(JSON.stringify({
  show: 1  // 1 显示  0 隐藏
 }))
 
