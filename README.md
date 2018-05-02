@@ -2,6 +2,11 @@
 新媒体接口调用方式，仿微信
 
 ```js
+// 切换导航显示与否
+wx.switchNav(JSON.stringfy({
+ show: 1  // 1 显示  0 隐藏
+}))
+
 // 登陆
 wx.navigateTo(JSON.stringify({
   path: "/login", // 必选
