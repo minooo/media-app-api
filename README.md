@@ -7,6 +7,12 @@ wx.switchNav(JSON.stringify({
  show: 1  // 1 显示  0 隐藏
 }))
 
+// 返回课程列表
+wx.courseListTo()
+
+// 返回插件列表
+wx.pluginListTo()
+
 // 登陆
 wx.navigateTo(JSON.stringify({
   path: "/login", // 必选
