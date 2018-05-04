@@ -7,6 +7,9 @@ wx.switchNav(JSON.stringify({
  show: 1  // 1 显示  0 隐藏
 }))
 
+// 三个导航对应的页面才会开启下拉刷新
+wx.pullReload()
+
 // 返回课程列表
 wx.courseListTo()
 
