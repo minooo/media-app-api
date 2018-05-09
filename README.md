@@ -7,6 +7,11 @@ wx.switchNav(JSON.stringify({
  show: 1  // 1 显示  0 隐藏
 }))
 
+// 是否开启顶部状态栏透明
+wx.onTopTransparent(JSON.stringify({
+  enable: "yes"  // yes no  
+}))
+
 // 返回课程列表
 wx.courseListTo()
 
